@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": "1",
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/gJ3BxcM/morgan-housel-a-Z-Mm-Sm-Acjg-unsplash.jpg",
+      "review": "A timeless classic that delves into the decadence and disillusionment of the Jazz Age.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": "2",
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/Wk8Sd45/matt-ridley-H-LIL57-PHCc-unsplash.jpg",
+      "review": "A powerful exploration of racial injustice and moral growth set in the American South.",
+      "totalPages": 281,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Classic", "Legal Drama"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": "3",
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image":"https://i.ibb.co/6smNsDz/thought-catalog-Q7s-Gp9-MSt-SY-unsplash.jpg",
+      "review": "A dystopian masterpiece that explores themes of totalitarianism and surveillance.",
+      "totalPages": 328,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": "4",
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image":"https://i.ibb.co/N9dZkqd/dan-gold-zv-Frn0-Ws7cw-unsplash.jpg",
+      "review": "An iconic coming-of-age novel that captures the angst and alienation of adolescence.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Coming-of-Age", "Literary"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": "5",
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/N9wtxZy/thought-catalog-B1d-QCWz0-U2w-unsplash.jpg",
+      "review": "A delightful adventure tale set in Middle-earth, filled with magic and memorable characters.",
+      "totalPages": 310,
+      "rating": 4.7,
+      "category": "Fantasy",
+      "tags": ["Adventure", "High Fantasy"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1937
+    },
+    {
+      "bookId": "6",
+      "bookName": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "image":"https://i.ibb.co/fHTx57y/zoe-1n-YWu8-s3d-E-unsplash.jpg",
+      "review": "A gripping thriller that blends art, religion, and cryptography into an intriguing mystery.",
+      "totalPages": 454,
+      "rating": 4.2,
+      "category": "Thriller",
+      "tags": ["Suspense", "Conspiracy"],
+      "publisher": "Doubleday",
+      "yearOfPublishing": 2003
+    }
+  ]
+  
