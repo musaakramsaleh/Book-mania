@@ -4,6 +4,7 @@ import Root from "../Components/Root/Root";
 import Listedbooks from "../Pages/ListedBooks/Listedbooks";
 import Toread from "../Pages/Toread/Toread";
 import Errorpage from "../Pages/Errors/Errorpage";
+import Book_details from "../Pages/Book-details/Book_details";
 
  const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ import Errorpage from "../Pages/Errors/Errorpage";
         {
             path:'/toread',
             element:<Toread></Toread>
+        },
+        {
+            path:'/book-details/:id',
+            element:<Book_details></Book_details>
         }
       ]
     },
