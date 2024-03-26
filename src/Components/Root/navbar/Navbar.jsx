@@ -20,9 +20,9 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex gap-5 ">
-    <NavLink to='/' className='text-xl text-[#131313CC] font-normal'>Home</NavLink>
-    <NavLink to='/listedbooks' className='text-xl text-[#131313CC] font-normal'>Listed Books</NavLink>
-    <NavLink to='/toread' className='text-xl text-[#131313CC] font-normal'>To read</NavLink>
+    <NavLink to='/' className={({ isActive}) => isActive ? "text-green-500 text-xl font-normal border border-green-500 border-solid" : "text-xl text-[#131313CC] font-normal"}>Home</NavLink>
+    <NavLink to='/listedbooks' className={({ isActive}) => isActive ? 'text-green-500 text-xl font-normal border border-green-500 border-solid': "text-xl text-[#131313CC] font-normal"}>Listed Books</NavLink>
+    <NavLink to='/toread' className={({ isActive}) => isActive ? "text-green-500 text-xl font-normal border border-green-500 border-solid" : "text-xl text-[#131313CC] font-normal"}>Pages To read</NavLink>
     </ul>
   </div>
   <div className="navbar-end">

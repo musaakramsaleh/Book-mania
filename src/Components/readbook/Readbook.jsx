@@ -19,8 +19,8 @@ const Readbook = () => {
                     </div>
                     <div className=''>
                         <h2 className='font-bold text-2xl'>{rea.bookName}</h2>
-                        <p>by: {rea.author}</p>
-                        <p className='mt-4 flex  pb-6 items-center justify-center'><b className='mr-4'>Tag:</b>{rea.tags && rea.tags.map(tag => (
+                        <p className='mt-4 text-[#131313CC] font-medium'>by: {rea.author}</p>
+                        <p className=' flex items-center justify-center mt-4'><b className='mr-4'>Tag:</b>{rea.tags && rea.tags.map(tag => (
                 <button
                     key={tag}
                     className="mr-4 bg-[#23BE0A0D] px-4 py-2 text-[#23BE0A] font-medium text-[16px] rounded-[30px]"
@@ -28,15 +28,15 @@ const Readbook = () => {
                     {tag}
                 </button>
             ))}
-            <span className='flex justify center items-center'><FaLocationPin />Year of Publishing: {rea.yearOfPublishing}</span>
+            <span className='flex justify center items-center text-[#424242] font-medium gap-2'><FaLocationPin />Year of Publishing: {rea.yearOfPublishing}</span>
             </p>
-            <div>
-                <p><IoPeople />Publisher: {rea.publisher}</p>
-                <p><RiPagesLine />Page: {rea.totalPages}</p>
+            <div className='flex gap-5 mt-4 text-[#13131399] font-medium'>
+                <p className='flex gap-2 justify-center items-center'><IoPeople />Publisher: {rea.publisher}</p>
+                <p className='flex gap-2 justify-center items-center'><RiPagesLine />Page: {rea.totalPages}</p>
             </div>
-            <button>Category: {rea.category}</button>
-            <button>Rating: {rea.rating}</button>
-            <Link to={`/book-details/${rea.bookId}`}><button>View Details</button></Link>
+            <button className='mt-4 px-5 py-3 rounded-2xl bg-[#328EFF26] text-[#328EFF] text-[16px] font-medium mr-5'>Category: {rea.category}</button>
+            <button className='mt-4 px-5 py-3 rounded-2xl bg-[#FFAC3326] text-[#FFAC33] text-[16px] font-medium mr-5'>Rating: {rea.rating}</button>
+            <Link to={`/book-details/${rea.bookId}`}><button className='px-5 py-3 mr-5 rounded-2xl bg-[#23BE0A] text-white text-[16px] font-medium'>View Details</button></Link>
                     </div>
                 </div>)
             }
