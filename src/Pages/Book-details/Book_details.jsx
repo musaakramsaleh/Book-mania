@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import useData from '../../Hooks/useData';
 import { useParams } from 'react-router-dom';
+import { saveToWishlist, savebook } from '../../utils/LocalStorage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Book_details = () => {
     const [single,setsingle] = useState({})
@@ -13,7 +16,13 @@ const Book_details = () => {
             }
         
     },[book,id])
-    console.log(single)
+    console.log()
+    const handleRead = ()=>{
+        savebook(single)
+    }
+    const handlewish =()=>{
+        saveToWishlist(single)
+    }
     return (
         <div className='flex gap-12 justify-start items-start mt-9'>
             <div className='h-[711px] flex-1'>
@@ -47,10 +56,13 @@ const Book_details = () => {
             <p className='mt-3'>{single.rating}</p>
             </div>
             </div>
-            <button className='mt-4 px-7 py-[18px] border border-solid border-[#131313CC] font-semibold text-[18px] text-black hover:text-white transition-[1000ms] rounded-2xl hover:bg-[#50B1C9]  mr-5'>Read</button>
-            <button className='mt-4 px-7 py-[18px] border border-solid border-[#131313CC] font-semibold text-[18px] text-black hover:text-white transition-[1000ms] rounded-2xl hover:bg-[#50B1C9] '>Wishlist</button>
+            <button onClick={()=>handleRead()} className='mt-4 px-7 py-[18px] border border-solid border-[#131313CC] font-semibold text-[18px] text-black hover:text-white transition-[1000ms] rounded-2xl hover:bg-[#50B1C9]  mr-5'>Read</button>
+            <button onClick={()=>handlewish()} className='mt-4 px-7 py-[18px] border border-solid border-[#131313CC] font-semibold text-[18px] text-black hover:text-white transition-[1000ms] rounded-2xl hover:bg-[#50B1C9] '>Wishlist</button>
+            <ToastContainer />
            </div>
+           
         </div>
+        
     );
 };
 
