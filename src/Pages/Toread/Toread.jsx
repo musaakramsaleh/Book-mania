@@ -11,7 +11,17 @@ const Toread = () => {
         const storedData = getStoredBooks().map(book => ({ name: book.bookName, pages: book.totalPages }));
         setChartData(storedData);
     }, []);
+    const CustomTooltip = ({ active, payload, label }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div className="custom-tooltip">
+                    <p className="label">{`${label} : ${payload[0].value} pages`}</p>
+                </div>
+            );
+        }
 
+        return null;
+    };
     const TriangleBar = (props) => {
         const { fill, x, y, width, height } = props;
 
@@ -24,10 +34,11 @@ const Toread = () => {
 
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
-
+ 
     return (
-        <BarChart
-            width={900}
+        <div className='w-full max-w-[900px]'>
+            <BarChart
+            width={1280}
             height={800}
             data={chartData}
             margin={{
@@ -36,6 +47,7 @@ const Toread = () => {
                 left: 20,
                 bottom: 5,
             }}
+            style={{ backgroundColor: '#f5f5f5', width:'100%'}}
         >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
@@ -46,6 +58,7 @@ const Toread = () => {
                 ))}
             </Bar>
         </BarChart>
+        </div>
     );
 };
 
