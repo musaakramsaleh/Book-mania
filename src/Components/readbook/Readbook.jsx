@@ -4,10 +4,8 @@ import { FaLocationPin } from "react-icons/fa6";
 import { IoPeople } from "react-icons/io5";
 import { RiPagesLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import { useRead } from '../../Pages/ListedBooks/Listedbooks';
+
 const Readbook = () => {
-    const gift = useContext(useRead)
-    console.log(gift.length)
    const [read,setread] = useState([])
    useEffect(()=>{
     const p = getStoredBooks()

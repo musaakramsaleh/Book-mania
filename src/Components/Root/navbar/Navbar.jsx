@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link to="/toread">Pages to Read</Link></li>
       </ul>
     </div>
-    <Link className='btn btn-ghost text-3xl text-black font-bold'>BOOK_INC..</Link>
+    <Link className='btn btn-ghost text-xl lg:text-3xl text-black font-bold'>BOOK_INC..</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex gap-5 ">
