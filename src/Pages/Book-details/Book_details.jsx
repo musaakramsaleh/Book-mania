@@ -24,7 +24,7 @@ const Book_details = () => {
         saveToWishlist(single)
     }
     return (
-        <div className='flex gap-12 justify-start items-start mt-9'>
+        <div className='flex md:flex-row flex-col md:mx-0 mx-2 gap-12 justify-start items-start mt-9 pb-3'>
             <div className='h-[711px] flex-1'>
                 <img src={single.image} className='h-full' alt="" />
             </div>

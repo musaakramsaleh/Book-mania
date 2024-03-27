@@ -77,8 +77,8 @@ const Listedbooks = () => {
             </div>
             <div className='pb-5'>
             {
-                tab === 1?read.map(rea=><div className='flex mt-5 border border-solid border-[#13131326] rounded-2xl p-6 gap-6'>
-                <div className='w-[230px] h-[230px]'>
+                tab === 1?read.map(rea=><div className='flex md:flex-row md:mx-0 mx-auto flex-col mt-5 border border-solid border-[#13131326] rounded-2xl p-6 gap-6'>
+                <div className='md:w-[230px] w-[300px] h-[300px] md:h-[230px]'>
                     <img className='w-full h-full rounded-2xl' src={rea.image} alt="" />
                 </div>
                 <div className=''>
@@ -94,7 +94,7 @@ const Listedbooks = () => {
         ))}
         <span className='flex justify center items-center text-[#424242] font-medium gap-2'><FaLocationPin />Year of Publishing: {rea.yearOfPublishing}</span>
         </p>
-        <div className='flex gap-5 mt-4 text-[#13131399] font-medium'>
+        <div className='flex md:flex-row flex-col gap-5 mt-4 text-[#13131399] font-medium'>
             <p className='flex gap-2 justify-center items-center'><IoPeople />Publisher: {rea.publisher}</p>
             <p className='flex gap-2 justify-center items-center'><RiPagesLine />Page: {rea.totalPages}</p>
         </div>
