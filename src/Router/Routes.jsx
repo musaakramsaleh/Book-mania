@@ -8,6 +8,7 @@ import Book_details from "../Pages/Book-details/Book_details";
 import Readbook from "../Components/readbook/Readbook";
 import Wishlist from "../Components/Wishlist/Wishlist";
 import About from "../Components/About/About";
+import Privacy from "../Components/Privacy/Privacy";
 
  const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ import About from "../Components/About/About";
         {
            path:'/about',
            element:<About></About>
+        },
+        {
+           path:'/privacy',
+           element:<Privacy></Privacy>
         },
         {
             path:'/book-details/:id',
