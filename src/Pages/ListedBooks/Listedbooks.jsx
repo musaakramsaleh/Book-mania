@@ -58,24 +58,24 @@ const Listedbooks = () => {
             <div className='py-[33px] mt-9 bg-[#1313130D] mx-auto'>
                  <h2 className="text-center text-5xl font-bold">Books</h2>
             </div>
-            <div className='max-w-[500px] mx-auto mt-5 text-center'>
-            <details className="dropdown">
-            <summary className="bg-[#23BE0A] font-bold text-xl text-white rounded-lg px-7 py-4 cursor-pointer">Sort by</summary>
-            <ul className="p-2 cursor-pointer shadow menu dropdown-content z-[1] text-[#131313CC] bg-[#1313130D] rounded-box w-52">
+            <div className='max-w-[500px] mx-auto mt-5  text-center'>
+            <details className="dropdown mb-12">
+            <summary className="bg-[#23BE0A] font-bold text-xl text-white rounded-lg px-7 py-4 cursor-pointer ">Sort by</summary>
+            <ul className="p-2 cursor-pointer shadow menu dropdown-content z-[1] font-bold text-[#131313CC] bg-[white] rounded-box w-52">
                <li onClick={changeRating}>Rating</li>
                <li onClick={changePages}>Number of Pages</li>
                <li onClick={changeYear}>Publisher year</li>
              </ul>
             </details>
             </div>
-            <div className='max-w-[500px] mt-5'>
+            <div className='max-w-[500px] mt-7'>
             <div role="tablist" className="tabs tabs-lifted text-[#1313134D] font-medium text-xl">
              <Link to='' onClick={()=>tabpress(1)} className={`tab ${tab === 1?'tab-active':''}`}>Read Books</Link>
              <Link to='' onClick={()=>tabpress(2)} className={`tab ${tab === 2?'tab-active':''}`}>Wishlist books</Link>
 </div> 
              
             </div>
-            <div className='pb-5'>
+            <div className='pb-5 '>
             {
                 tab === 1?read.map(rea=><div className='flex md:flex-row md:mx-0 mx-auto flex-col mt-5 border border-solid border-[#13131326] rounded-2xl p-6 gap-6'>
                 <div className='md:w-[230px] w-[300px] h-[300px] md:h-[230px]'>
@@ -100,11 +100,11 @@ const Listedbooks = () => {
         </div>
         <button className='mt-4 px-5 py-3 rounded-2xl bg-[#328EFF26] text-[#328EFF] text-[16px] font-medium mr-5'>Category: {rea.category}</button>
         <button className='mt-4 px-5 py-3 rounded-2xl bg-[#FFAC3326] text-[#FFAC33] text-[16px] font-medium mr-5'>Rating: {rea.rating}</button>
-        <Link to={`/book-details/${rea.bookId}`}><button className='px-5 py-3 mr-5 rounded-2xl bg-[#23BE0A] text-white text-[16px] font-medium'>View Details</button></Link>
+        <Link to={`/book-details/${rea.bookId}`}><button className='md:ml-0 ml-20 mt-4 px-5 py-3 md:mr-5 rounded-2xl bg-[#23BE0A] text-white text-[16px] font-medium'>View Details</button></Link>
                 </div>
             </div>):
-                choice.map(rea=><div className='flex mt-5 border border-solid border-[#13131326] rounded-2xl p-6 gap-6'>
-                    <div className='w-[230px] h-[230px]'>
+                choice.map(rea=><div className=' flex md:flex-row md:mx-0 mx-auto flex-col mt-5 border border-solid border-[#13131326] rounded-2xl p-6 gap-6'>
+                    <div className='md:w-[230px] w-[300px] h-[300px] md:h-[230px]'>
                         <img className='w-full h-full rounded-2xl' src={rea.image} alt="" />
                     </div>
                     <div className=''>
@@ -120,13 +120,13 @@ const Listedbooks = () => {
             ))}
             <span className='flex justify center items-center text-[#424242] font-medium gap-2'><FaLocationPin />Year of Publishing: {rea.yearOfPublishing}</span>
             </p>
-            <div className='flex gap-5 mt-4 text-[#13131399] font-medium'>
+            <div className='flex md:flex-row flex-col gap-5 mt-4 text-[#13131399] font-medium'>
                 <p className='flex gap-2 justify-center items-center'><IoPeople />Publisher: {rea.publisher}</p>
                 <p className='flex gap-2 justify-center items-center'><RiPagesLine />Page: {rea.totalPages}</p>
             </div>
             <button className='mt-4 px-5 py-3 rounded-2xl bg-[#328EFF26] text-[#328EFF] text-[16px] font-medium mr-5'>Category: {rea.category}</button>
             <button className='mt-4 px-5 py-3 rounded-2xl bg-[#FFAC3326] text-[#FFAC33] text-[16px] font-medium mr-5'>Rating: {rea.rating}</button>
-            <Link to={`/book-details/${rea.bookId}`}><button className='px-5 py-3 mr-5 rounded-2xl bg-[#23BE0A] text-white text-[16px] font-medium'>View Details</button></Link>
+            <Link to={`/book-details/${rea.bookId}`}><button className='md:ml-0 ml-20 mt-4 px-5 py-3 md:mr-5 rounded-2xl bg-[#23BE0A] text-white text-[16px] font-medium'>View Details</button></Link>
                     </div>
                 </div>)
             }

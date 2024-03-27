@@ -14,6 +14,7 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/listedbooks">Listed Books</Link></li>
         <li><Link to="/toread">Pages to Read</Link></li>
+        <li><Link to="/about">About us</Link></li>
       </ul>
     </div>
     <Link className='btn btn-ghost text-xl lg:text-3xl text-black font-bold'>BOOK_INC..</Link>
@@ -23,6 +24,7 @@ const Navbar = () => {
     <NavLink to='/' className={({ isActive}) => isActive ? "text-green-500 text-xl font-normal border border-green-500 border-solid" : "text-xl text-[#131313CC] font-normal"}>Home</NavLink>
     <NavLink to='/listedbooks' className={({ isActive}) => isActive ? 'text-green-500 text-xl font-normal border border-green-500 border-solid': "text-xl text-[#131313CC] font-normal"}>Listed Books</NavLink>
     <NavLink to='/toread' className={({ isActive}) => isActive ? "text-green-500 text-xl font-normal border border-green-500 border-solid" : "text-xl text-[#131313CC] font-normal"}>Pages To read</NavLink>
+    <NavLink to='/about' className={({ isActive}) => isActive ? "text-green-500 text-xl font-normal border border-green-500 border-solid" : "text-xl text-[#131313CC] font-normal"}>About us</NavLink>
     </ul>
   </div>
   <div className="navbar-end">
